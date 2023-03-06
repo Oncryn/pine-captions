@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine Translated Captions</title>
+    <link rel="stylesheet" href="../tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-md space-y-8">
+            <div>
+                <img class="mx-auto h-24 w-auto" src="../../assets/icon.png">
+                <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Pine Translated Captions
+                </h2>
+            </div>
+            <form id="form" class="mt-8 space-y-6">
+                <div class="-space-y-px rounded-md shadow-sm">
+                    <div>
+                        <label for="speechToTextService" class="block mb-2 text-sm font-medium text-gray-900">Speech to text service</label>
+                        <select id="speechToTextService" required
+                            class="border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-2">
+                            <option value="otter">Otter</option>
+                            <option value="deepgram">Deepgram</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input id="key" required
+                            class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                            placeholder="URL or API Key">
+                    </div>
+                </div>
+                <div class="-space-y-px rounded-md shadow-sm">
+                    <div>
+                        <label for="language" class="block mb-2 text-sm font-medium text-gray-900">Language</label>
+                        <select id="language" required
+                            class="border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-2">
+                            <option value="ja">Japanese</option>
+                            <option value="zh-cn">Chinese</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="-space-y-px rounded-md shadow-sm">
+                    <div>
+                        <label for="translator" class="block mb-2 text-sm font-medium text-gray-900">Translator</label>
+                        <select id="translator" required
+                            class="border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-2">
+                            <option value="google">Google Translate</option>
+                            <option value="bing">Bing Translate</option>
+                            <option value="libre">Libre Translate</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="-space-y-px rounded-md shadow-sm">
+                    <div>
+                        <label for="style" class="block mb-2 text-sm font-medium text-gray-900">Style</label>
+                        <select id="style" required
+                            class="border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-2">
+                            <option value="closed">Closed Captions</option>
+                            <option value="fullscreen">Fullscreen</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="saveSettings" type="checkbox"
+                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="saveSettings" class="ml-2 block text-sm text-gray-900">Save settings</label>
+                    </div>
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Documentation</a>
+                    </div>
+                </div>
+                <div>
+                    <button
+                        id="open" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700">
+                        Open
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
